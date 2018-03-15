@@ -17,11 +17,11 @@ class ShoppingCart extends Component {
     this.state = {
       cart: []
     };
-    store.subcribe(()=> { //acá en el constructor vamos a subcribir, esto recibe una funcion que es el callback que se va a llamar 
+    store.subcribe = () => { //acá en el constructor vamos a subcribir, esto recibe una funcion que es el callback que se va a llamar 
       this.setState({     // cada vez que se modifique el estado y acá actualizamos el estado local // el this recibe un objeto
         cart: store.getState().cart //modificamos cart, con el cart que este en el estado global (store), utilizamos el utilo metodo y la llave cart
       }); //esto va a volver a renderizar el componente y va a agregar ese producto que lo va a mostrar en la funcion de abajo
-    });
+    };
   }
 
   render() {

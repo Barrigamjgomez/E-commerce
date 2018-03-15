@@ -16,8 +16,8 @@ export default createStore(reducer, { cart:[] }); //en los parentesis le agregam
 
 
 //la funcion reductora recibe dos parametros el estado actual(state) y la acción (action) que quiere ejecutar
-//comparamos la funcion, si la accion es igual al objeto dele evento, entonces:
-//retorna un nuevo estado, con el producto que le dieron click en el carrito de compra
+//comparamos la funcion, si la accion es igual al objeto del evento, entonces:
+//retorna un nuevo estado con el producto que le dieron click en el carrito de compra
 //en vez de modificar el estado, vamos a crear un nuevo objeto
 //modificamos la llave cart, lo que habia antes en la llave cart lo concatenamos, esto va a devolver un nuevo arreglo
 	//y en los "()" le agregamos el producto.

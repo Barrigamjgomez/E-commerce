@@ -19,16 +19,28 @@ class ProductList extends Component {
   constructor() {
     super();
     this.addToCart = this.addToCart.bind(this);
-
     this.state = {
+      thumbnail: False,
+      products : []
+    }
+  }
+  component(){
+    this.randomize
+  }
+  randomize(){
+       fetch(`https://api.mercadolibre.com/sites/MLC/search?q=${result}`).then(function (response) {
+      return response.json();
+        }
+
+    /*this.state = {
       products: [
-        { id: 1, name: "Hipster Ultimate", price: 299, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" },
-        { id: 2, name: "On Motion Live", price: 99, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" },
-        { id: 3, name: "Underground Max", price: 149, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg" },
+        { id: 1, name: "Hipster Ultimate", price: 7000, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" },
+        { id: 2, name: "On Motion Live", price: 8000, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" },
+        { id: 3, name: "Underground Max", price: 4000, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg" },
       ]
     }
   }
-
+*/ /*
   render() {
     return (
       <div style={styles.products}>
@@ -48,11 +60,13 @@ class ProductList extends Component {
   }
 
   addToCart(product) {
-      store.dispatch({ //creamos el evento, // cuando estó se llame redux llamara a la función que está en store.js *reducer*
-        type: "ADD_TO_CART", //aqui estamos utilzando el primer metodo del store y en los parentesis 
-        product              //le pasamos una acción que es un objeto (type)
-      })
+      store.dispatch({ 
+        type: "ADD_TO_CART", 
+        product              
+      });
   }
-}
-
+}*/
+//creamos el evento, // cuando estó se llame redux llamara a la función que está en store.js *reducer*
+//aqui estamos utilzando el primer metodo del store y en los parentesis 
+//le pasamos una acción que es un objeto (type)
 export default ProductList;

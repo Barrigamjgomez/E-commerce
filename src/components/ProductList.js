@@ -19,20 +19,8 @@ class ProductList extends Component {
   constructor() {
     super();
     this.addToCart = this.addToCart.bind(this);
-    this.state = {
-      thumbnail: False,
-      products : []
-    }
-  }
-  component(){
-    this.randomize
-  }
-  randomize(){
-       fetch(`https://api.mercadolibre.com/sites/MLC/search?q=${result}`).then(function (response) {
-      return response.json();
-        }
 
-    /*this.state = {
+    this.state = {
       products: [
         { id: 1, name: "Hipster Ultimate", price: 7000, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" },
         { id: 2, name: "On Motion Live", price: 8000, image: "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" },
@@ -40,7 +28,7 @@ class ProductList extends Component {
       ]
     }
   }
-*/ /*
+
   render() {
     return (
       <div style={styles.products}>
@@ -65,8 +53,9 @@ class ProductList extends Component {
         product              
       });
   }
-}*/
+}
+export default ProductList;
 //creamos el evento, // cuando estó se llame redux llamara a la función que está en store.js *reducer*
 //aqui estamos utilzando el primer metodo del store y en los parentesis 
 //le pasamos una acción que es un objeto (type)
-export default ProductList;
+
